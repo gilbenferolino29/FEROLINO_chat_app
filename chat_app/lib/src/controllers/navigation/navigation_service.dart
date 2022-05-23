@@ -1,14 +1,19 @@
 import 'package:chat_app/src/screens/authentication/auth_screen.dart';
-import 'package:chat_app/src/screens/home/home_screen.dart';
+import 'package:chat_app/src/screens/onboarding/home_screen.dart';
+import 'package:chat_app/src/screens/onboarding/landing_screen.dart';
+import 'package:chat_app/src/screens/onboarding/register_screen.dart';
+import 'package:chat_app/src/screens/onboarding/splash_screen.dart';
+
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/material.dart';
 import 'dart:developer' as developer;
+
 part 'navigation_animations.dart';
 part 'navigation_routing.dart';
 
 class NavigationService {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-  List<String> routeStack = [AuthScreen.route];
+  List<String> routeStack = [SplashScreen.route];
   String get currentRoute {
     String result = '';
     if (routeStack.isNotEmpty) {

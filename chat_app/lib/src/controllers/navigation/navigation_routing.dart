@@ -6,7 +6,13 @@ PageRoute getRoute(RouteSettings settings) {
       return FadeRoute(page: const AuthScreen(), settings: settings);
     case HomeScreen.route:
       return FadeRoute(page: const HomeScreen(), settings: settings);
+    case RegisterScreen.route:
+      return FadeRoute(page: const RegisterScreen(), settings: settings);
+    case LandingScreen.route:
+      return FadeRoute(page: const LandingScreen(), settings: settings);
+    case SplashScreen.route:
+      return FadeRoute(page: const SplashScreen(), settings: settings);
     default:
-      return MaterialPageRoute(builder: (context) => const AuthScreen());
+      return MaterialPageRoute(builder: (context) => const SplashScreen());
   }
 }
