@@ -198,7 +198,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(width: 5),
                     GestureDetector(
                       onTap: () {
-                        nav.pushNamed(AuthScreen.route);
+                        nav.pushReplacementNamed(AuthScreen.route);
                       },
                       child: Text(
                         'LOG IN',

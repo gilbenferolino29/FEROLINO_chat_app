@@ -12,6 +12,8 @@ PageRoute getRoute(RouteSettings settings) {
       return FadeRoute(page: const LandingScreen(), settings: settings);
     case SplashScreen.route:
       return FadeRoute(page: const SplashScreen(), settings: settings);
+    case ChatScreen.route:
+      return SlideRightRoute(page: const ChatScreen(), settings: settings);
     default:
       return MaterialPageRoute(builder: (context) => const SplashScreen());
   }

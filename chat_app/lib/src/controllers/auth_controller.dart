@@ -45,6 +45,7 @@ class AuthController with ChangeNotifier {
     if (event != null) {
       print('logged in user');
       print(event.email);
+
       nav.pushReplacementNamed(HomeScreen.route);
     }
     error = null;

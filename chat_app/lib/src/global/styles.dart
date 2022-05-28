@@ -30,3 +30,31 @@ final kDesc2 = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   letterSpacing: 1,
 );
+
+final kChat = GoogleFonts.poppins(
+  color: Colors.white,
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 1,
+);
+final kChat2 = GoogleFonts.poppins(
+  // color: Colors.white54,
+  color: kPrimaryColor2,
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 1,
+);
+
+final messageOwn = GoogleFonts.poppins(
+  // color: Colors.white54,
+  color: Colors.white,
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 1,
+);
+final messageOther = GoogleFonts.poppins(
+  color: Colors.black,
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 1,
+);

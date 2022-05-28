@@ -5,7 +5,8 @@ class ChatUser {
   Timestamp created, updated;
 
   ChatUser(this.uid, this.username, this.email, this.image, this.created,
-      this.updated);
+      this.updated,
+      {final chats});
 
   static ChatUser fromDocumentSnap(DocumentSnapshot snap) {
     Map<String, dynamic> json = snap.data() as Map<String, dynamic>;

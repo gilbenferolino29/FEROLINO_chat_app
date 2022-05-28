@@ -1,4 +1,5 @@
 import 'package:chat_app/src/screens/authentication/auth_screen.dart';
+import 'package:chat_app/src/screens/chat_screen.dart';
 import 'package:chat_app/src/screens/onboarding/home_screen.dart';
 import 'package:chat_app/src/screens/onboarding/landing_screen.dart';
 import 'package:chat_app/src/screens/onboarding/register_screen.dart';

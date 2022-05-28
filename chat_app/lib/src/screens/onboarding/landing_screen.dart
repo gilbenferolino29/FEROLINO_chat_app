@@ -1,7 +1,6 @@
 import 'package:chat_app/src/controllers/navigation/navigation_service.dart';
 import 'package:chat_app/src/screens/authentication/auth_screen.dart';
-import 'package:chat_app/src/screens/onboarding/home_screen.dart';
-import 'package:chat_app/src/screens/onboarding/splash_screen.dart';
+
 import 'package:chat_app/src/service_locators.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +20,7 @@ class LandingScreen extends StatefulWidget {
 
 class _LandingScreenState extends State<LandingScreen> {
   int currentPage = 0;
-  PageController _pageController = PageController(initialPage: 0);
+  final PageController _pageController = PageController(initialPage: 0);
   final NavigationService nav = locator<NavigationService>();
 
   AnimatedContainer dotIndicator(index) {
@@ -109,7 +108,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 const SizedBox(width: 5),
                 GestureDetector(
                   onTap: () {
-                    nav.pushNamed(AuthScreen.route);
+                    nav.pushReplacementNamed(AuthScreen.route);
                   },
                   child: Text(
                     'Log in',
