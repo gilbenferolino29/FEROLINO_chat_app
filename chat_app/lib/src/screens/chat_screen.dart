@@ -232,23 +232,39 @@ class ChatCard extends StatelessWidget {
                       future: ChatUser.fromUid(uid: chat.sentBy),
                       builder: (context, AsyncSnapshot<ChatUser> snap) {
                         if (snap.hasData) {
-                          return Text(
-                              chat.sentBy ==
-                                      FirebaseAuth.instance.currentUser?.uid
-                                  ? 'You sent:'
-                                  : '${snap.data?.username} sent',
-                              style: chat.sentBy ==
-                                      FirebaseAuth.instance.currentUser?.uid
-                                  ? messageOwn
-                                  : messageOther);
+                          return Row(
+                            mainAxisAlignment: chat.sentBy ==
+                                    FirebaseAuth.instance.currentUser?.uid
+                                ? MainAxisAlignment.end
+                                : MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                  chat.sentBy ==
+                                          FirebaseAuth.instance.currentUser?.uid
+                                      ? 'You sent:'
+                                      : '${snap.data?.username} sent',
+                                  style: chat.sentBy ==
+                                          FirebaseAuth.instance.currentUser?.uid
+                                      ? messageOwn
+                                      : messageOther),
+                            ],
+                          );
                         }
                         return const Text('User');
                       }),
-                  Text(chat.message,
-                      style:
-                          chat.sentBy == FirebaseAuth.instance.currentUser?.uid
+                  Row(
+                    mainAxisAlignment:
+                        chat.sentBy == FirebaseAuth.instance.currentUser?.uid
+                            ? MainAxisAlignment.end
+                            : MainAxisAlignment.start,
+                    children: [
+                      Text(chat.message,
+                          style: chat.sentBy ==
+                                  FirebaseAuth.instance.currentUser?.uid
                               ? messageOwn
                               : messageOther),
+                    ],
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
